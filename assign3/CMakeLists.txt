@@ -14,11 +14,9 @@ set(LLVM_LINK_COMPONENTS
 
 message(STATUS "LLVM LIBS : ${LLVM_LINK_COMPONENTS}")
 # Support plugins.
+file(GLOB SOURCE "./*.cpp") 
+add_executable(assignment3 ${SOURCE}) 
 
-add_executable(llvmassignment
-  LLVMAssignment.cpp
-  )
-
-target_link_libraries(llvmassignment
+target_link_libraries(assignment3
 	${LLVM_LINK_COMPONENTS}
 	)
